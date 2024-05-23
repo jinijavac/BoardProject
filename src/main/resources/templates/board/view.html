@@ -12,6 +12,7 @@
     <strong>Created At : </strong> <span th:text="${board.createdAt}"></span><br>
 </div>
 <a th:href="@{/board}">List</a>
-<a th:href="@{/board/view(id=${board.id})}">edit</a>
+<a th:href="@{/board/updateform(id=${board.id})}">Edit</a>
+<a th:href="@{/board/deleteform(id=${board.id})}">Delete</a>
 </body>
 </html>

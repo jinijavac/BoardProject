@@ -18,6 +18,6 @@ public class Board {
     private String title;
     private String password;
     private String content;
-    private LocalDateTime creatAt;
-    private
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 }

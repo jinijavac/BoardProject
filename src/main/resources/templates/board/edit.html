@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Add Board</title>
+    <title>Edit Board</title>
 </head>
 <body>
-<h1>Create a New Board</h1>
-<form th:action="@{/board/writeform}" method="post" th:object="${board}">
+<h1>Update Board</h1>
+<form th:action="@{/board/updateform}" method="post" th:object="${board}">
+    <input type="hidden" th:field="*{id}"/> <!-- ID는 hidden 필드로 전달 -->
     <label for="name">Name</label><br>
     <input type="text" id="name" th:field="*{name}" required/><br>
     <label for="title">Title</label><br>
@@ -15,7 +16,7 @@
     <input type="text" id="content" th:field="*{content}" required/><br>
     <label for="password">Password</label><br>
     <input type="password" id="password" th:field="*{password}" required/><br><br>
-    <button type="submit">Submit</button>
+    <button type="submit">update</button>
 </form>
 </body>
 </html>

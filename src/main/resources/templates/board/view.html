@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Board View</title>
+</head>
+<body>
+<h1 th:text="${board.title}">title</h1>
+<div>
+    <strong>Name : </strong> <span th:text="${board.name}"></span><br>
+    <strong>Content : </strong> <span th:text="${board.content}"></span><br>
+    <strong>Created At : </strong> <span th:text="${board.createdAt}"></span><br>
+</div>
+<a th:href="@{/board}">List</a>
+<a th:href="@{/board/view(id=${board.id})}">edit</a>
+</body>
+</html>

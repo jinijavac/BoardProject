@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Board</title>
+</head>
+<body>
+<h1>Create a New Board</h1>
+<form th:action="@{board/form}" method="post" th:object="${board}">
+    <label for="name">Name</label><br>
+    <input type="text" id="name" th:field="*{name}" required/><br>
+    <label for="title">Title</label><br>
+    <input type="text" id="title" th:field="*{title}" required/><br>
+    <label for="content">Content</label><br>
+    <input type="text" id="content" th:field="*{content}" required/><br>
+    <label for="password">Password</label><br>
+    <input type="password" id="password" th:field="*{password}" required/><br><br>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

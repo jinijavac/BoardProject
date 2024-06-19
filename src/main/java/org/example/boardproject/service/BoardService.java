@@ -23,7 +23,6 @@ public class BoardService {
     public Page<Board> findAllBoard(Pageable pageable){
         Pageable sortedByDescId = PageRequest.of(pageable.getPageNumber(), pageable.getPageSize(),
                 Sort.by(Sort.Direction.DESC, "id"));
-
         return boardRepository.findAll(sortedByDescId);
     }
 
@@ -46,5 +45,4 @@ public class BoardService {
         }
         boardRepository.deleteById(id);
     }
-
 }
